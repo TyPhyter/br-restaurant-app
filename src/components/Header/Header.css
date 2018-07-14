@@ -1,0 +1,21 @@
+@font-face {
+    font-family: Avenir Next Demibold;
+    src: url(../../fonts/AvenirNext-DemiBold.ttf);
+}
+
+.Header {
+    text-align: center;
+    background: #43e895;
+    height: 65px;
+    position: relative;
+}
+
+.Header__text {
+    font-family: Avenir Next Demibold, sans-serif;
+    font-size: 17px;
+    color: #FFFFFF;
+    position: absolute;
+    bottom: 16px;
+    left: 0;
+    right: 0;
+}
