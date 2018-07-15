@@ -34,9 +34,7 @@ export default class RestaurantList extends Component {
                             category={restaurant.category}
                             imgSrc={restaurant.backgroundImageURL}
                         />
-                    )
-
-                    )
+                    ))
                 }
             </div>
         )
