@@ -1,5 +1,4 @@
 .RestaurantPanel {
-    background: green;
     text-align: left;
     width: 100%;
     height: 180px;
@@ -16,6 +15,7 @@
     bottom: 0;
     left: 0;
     width: 200%;
+    /* to stretch the gradient and make it darker to match the spec */
     height: 175%;
     z-index: 1;
     background: url(../../assets/gradients/cellGradientBackground@2x.png);
@@ -50,7 +50,7 @@
     .RestaurantPanel {
         width: 40%;
         display: inline-block;
-        margin-bottom: -4px;
+        margin-bottom: -2px;
     }
 
     .RestaurantPanel__image {
@@ -64,6 +64,7 @@
     .RestaurantPanel__image {
         width: 100%;
         height: auto;
+        /* to better center the picture */
         transform: translateY(-20%);
     }
 }

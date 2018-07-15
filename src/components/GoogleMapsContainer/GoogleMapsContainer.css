@@ -1,0 +1,13 @@
+.InfoWindow__name {
+    font-family: Avenir Next Demibold;
+    font-weight: bold;
+    margin-top: 6px;
+}
+
+.InfoWindow__address {
+    font-family: Avenir Next Regular;
+}
+
+.InfoWindow__phone {
+    font-family: Avenir Next Regular;
+}

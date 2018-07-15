@@ -1,17 +1,23 @@
 {
   "name": "br-restaurant-app",
   "version": "0.1.0",
+  "homepage": "http://typhyter.github.io/br-restaurant-app",
   "private": true,
   "dependencies": {
     "axios": "^0.18.0",
+    "gh-pages": "^1.2.0",
+    "google-maps-react": "^2.0.2",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
-    "react-scripts": "1.1.4"
+    "react-scripts": "1.1.4",
+    "react-transition-group": "^2.4.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   }
 }
