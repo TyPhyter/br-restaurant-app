@@ -6,13 +6,13 @@ export default class RestaurantPanel extends Component {
     render() {
         return (
             <div className="RestaurantPanel">
-                <img className="RestaurantPanel__image" src="#" />
+                <img className="RestaurantPanel__image" alt={this.props.name + ' image '} src={this.props.imgSrc} />
                 <div className="RestaurantPanel__text-content">
                     <div className="RestaurantPanel__name">
-                        Restaurant Name
+                        {this.props.name}
                     </div>
                     <div className="RestaurantPanel__category">
-                        Category Type
+                        {this.props.category}
                     </div>
                 </div>
             </div>

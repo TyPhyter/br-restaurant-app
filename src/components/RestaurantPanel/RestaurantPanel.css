@@ -1,0 +1,45 @@
+.RestaurantPanel {
+    background: green;
+    text-align: left;
+    height: 180px;
+    position: relative;
+    overflow: hidden;
+}
+
+.RestaurantPanel::after {
+    content: url(../../assets/gradients/cellGradientBackground@2x.png);
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    margin-top: -180px;
+}
+
+.RestaurantPanel__img {
+    width: 100%;
+    height: 100%;
+}
+
+.RestaurantPanel__text-content {
+    position: absolute;
+    bottom: 0;
+    left: 12px;
+    z-index: 2;
+}
+
+.RestaurantPanel__name {
+    font-family: Avenir Next Demibold;
+    font-size: 16px;
+    color: #FFFFFF;
+    margin-bottom: 6px;
+}
+
+.RestaurantPanel__category {
+    font-family: Avenir Next Regular;
+    font-size: 12px;
+    color: #FFFFFF;
+    margin-bottom: 6px;
+}
