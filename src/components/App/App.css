@@ -1,11 +1,11 @@
 @font-face {
   font-family: Avenir Next Demibold;
-  src: url(../../fonts/AvenirNext-DemiBold.ttf);
+  src: url(../../assets/fonts/AvenirNext-DemiBold.ttf);
 }
 
 @font-face {
   font-family: Avenir Next Regular;
-  src: url(../../fonts/AvenirNext-Regular.ttf);
+  src: url(../../assets/fonts/AvenirNext-Regular.ttf);
 }
 
 .App {
