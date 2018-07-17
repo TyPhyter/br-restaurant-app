@@ -23,10 +23,10 @@
 .Header__map-icon {
     position: fixed;
     right: 16px;
-    top: 16px;
+    top: 20px;
     cursor: pointer;
 }
 
 .Header__map-icon img {
-    max-height: 40px;
+    max-height: 35px;
 }
