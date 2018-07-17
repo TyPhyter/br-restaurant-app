@@ -30,7 +30,7 @@ export default class DetailView extends Component {
         const { lat, lng, address, city, state, postalCode } = this.props.selectedRestaurant ? 
             this.props.selectedRestaurant.location : { lat: 0, lng: 0, address: '' };
 
-        const { phone, twitter } = this.props.selectedRestaurant && this.props.selectedRestaurant.contact ? 
+        const { formattedPhone:phone, twitter } = this.props.selectedRestaurant && this.props.selectedRestaurant.contact ? 
             this.props.selectedRestaurant.contact : { phone: '(xxx) xxx - xxxx', twitter: '' };
 
         return (

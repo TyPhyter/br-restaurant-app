@@ -50,7 +50,7 @@
     .RestaurantPanel {
         width: 40%;
         display: inline-block;
-        margin-bottom: -2px;
+        margin-bottom: -3px;
     }
 
     .RestaurantPanel__image {
@@ -61,6 +61,10 @@
 }
 
 @media screen and (min-width: 1024px) {
+    .RestaurantPanel {
+        margin-bottom: -2px;
+    }
+
     .RestaurantPanel__image {
         width: 100%;
         height: auto;
