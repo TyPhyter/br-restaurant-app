@@ -24,65 +24,75 @@ export default class DetailView extends Component {
         //     left: '-100vw'
         // }
 
-        const { name, category } = this.props.selectedRestaurant ? 
+        const { name, category } = this.props.selectedRestaurant ?
             this.props.selectedRestaurant : { name: '', category: '' };
 
-        const { lat, lng, address, city, state, postalCode } = this.props.selectedRestaurant ? 
+        const { lat, lng, address, city, state, postalCode } = this.props.selectedRestaurant ?
             this.props.selectedRestaurant.location : { lat: 0, lng: 0, address: '' };
 
-        const { formattedPhone:phone, twitter } = this.props.selectedRestaurant && this.props.selectedRestaurant.contact ? 
+        const { formattedPhone: phone, twitter } = this.props.selectedRestaurant && this.props.selectedRestaurant.contact ?
             this.props.selectedRestaurant.contact : { phone: '(xxx) xxx - xxxx', twitter: '' };
 
         return (
             <CSSTransition
-              in={this.state.showDetailView}
-              timeout={300}
-              classNames="DetailView"
-              unmountOnExit
-              onExited={() => {
-                // this.setState({
-                //   /
-                // });
-              }}
-            > 
+                in={this.state.showDetailView}
+                timeout={300}
+                classNames="DetailView"
+                unmountOnExit
+                onExited={() => {
+                    // this.setState({
+                    //   /
+                    // });
+                }}
+            >
                 <div className="DetailView">
                     <div className="DetailView__back-button" onClick={this.props.backButtonClickHandler}>
-                        <img src={ backBtn } alt="back button" />
+                        <img src={backBtn} alt="back button" />
                     </div>
                     <div className="DetailView__map">
-                        <GoogleMapsContainer 
+                        <GoogleMapsContainer
                             selectedRestaurant={this.props.selectedRestaurant}
-                            coords={{lat, lng}}
+                            coords={{ lat, lng }}
                         />
                     </div>
                     <div className="DetailView__details">
                         <div className="DetailView__name-bar">
                             <div className="DetailView__name-bar-content">
                                 <div className="DetailView__name">
-                                    { name }
+                                    {name}
                                 </div>
                                 <div className="DetailView__category">
-                                    { category }
+                                    {category}
                                 </div>
                             </div>
                         </div>
                         <div className="DetailView__contact">
                             <div className="DetailView__address">
-                                <div>{ address }</div>
-                                <div>{ `${city}, ${state} ${postalCode}` }</div>
+                                <div>{address}</div>
+                                <div>{`${city}, ${state} ${postalCode || ''}`}</div>
                             </div>
-                            {
-                                // true && expression = expression
-                                this.props.selectedRestaurant && this.props.selectedRestaurant.contact &&
-                                <div>
+                            <div>
+                                {
+                                    // true && expression = expression
+                                    this.props.selectedRestaurant && this.props.selectedRestaurant.contact
+                                    && this.props.selectedRestaurant.contact.phone &&
+
                                     <div className="DetailView__phone">
-                                        { phone }
+                                        {phone}
                                     </div>
+                                }
+                                {
+                                    // true && expression = expression
+                                    this.props.selectedRestaurant && this.props.selectedRestaurant.contact
+                                    && this.props.selectedRestaurant.contact.twitter &&
+
                                     <div className="DetailView__twitter">
-                                        { '@' + twitter }
+                                        {'@' + twitter}
                                     </div>
-                                </div>
-                            }
+                                }
+
+
+                            </div>
                         </div>
                     </div>
                 </div>
